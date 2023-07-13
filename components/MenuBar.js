@@ -62,7 +62,6 @@ export default function MenuBar(props) {
           sx={{
             width: "100%",
             justifyContent: "space-between",
-            padding: "5vh",
           }}
         >
           <IconButton
