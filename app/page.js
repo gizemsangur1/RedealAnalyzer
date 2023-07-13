@@ -1,5 +1,6 @@
 import BannerPage from "@/Pages/BannerPage";
 import Property from "@/Pages/Property";
+import Steps from "@/Pages/Steps";
 import MenuBar from "@/components/MenuBar";
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <MenuBar />
         <BannerPage />
         <Property/>
+        <Steps/>
       </div>
     </main>
   );
