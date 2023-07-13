@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 export default function BannerPage() {
   return (
-    <Grid container direction="row">
+    <Grid container direction="row" sx={{backgroundColor:"#5663DA0A 4%"}}>
       <Grid item md={4} sm={12}>
         <Box sx={{ top: "60px", position: "relative" }}>
           <HeadingLine text={"REI Deal Analyzer"} />

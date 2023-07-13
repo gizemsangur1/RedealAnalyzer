@@ -1,4 +1,5 @@
 import BannerPage from "@/Pages/BannerPage";
+import Property from "@/Pages/Property";
 import MenuBar from "@/components/MenuBar";
 export default function Home() {
   return (
@@ -6,6 +7,7 @@ export default function Home() {
       <div className="p-50">
         <MenuBar />
         <BannerPage />
+        <Property/>
       </div>
     </main>
   );
