@@ -8,7 +8,7 @@ export default function StepThree() {
     <div>
       <Grid container>
         <Grid item md={5}>
-          <HeadingLine text={"Step 1"} />
+          <HeadingLine text={"Step 3"} />
           <b style={{ fontSize: "40px" }}>
             Calculate your max allowable
             <br /> offers to sellers.
@@ -23,10 +23,13 @@ export default function StepThree() {
             Quickly search for properties and import their description, list
             price, value & rent estimates, property taxes, photos and more.
           </p>
-          <ReButton name={"Contact Us Now"} />
+          <Grid sx={{marginTop:"30px"}}>
+              <ReButton name={"Contact Us Now"} bgcolor={"#5663DA"} color={"white"}/>
+          </Grid>
+        
         </Grid>
         <Grid item md={7}>
-          <img src="./step3.png" />
+          <img src="./images/step3.png" />
         </Grid>
       </Grid>
     </div>

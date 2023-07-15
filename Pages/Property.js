@@ -23,7 +23,7 @@ export default function Property() {
             industry. Lorem Ipsum has been the industry's standard dummy
           </p>
           <Grid sx={{ marginTop: "25px" }}>
-            <ReButton name={"Contact Us Now"} />
+            <ReButton name={"Contact Us Now"} bgcolor={"#5663DA"} color={"white"}/>
           </Grid>
         </Grid>
       </Grid>

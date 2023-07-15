@@ -8,8 +8,8 @@ export default function Steps() {
   return (
     <div>
       <Grid container direction="row" sx={{textAlign:"center",justifyContent:"center"}}>
-        <Typography sx={{fontSize:"40px"}}>
-          Accurate property analysis in just a few clicks:
+        <Typography sx={{fontSize:"40px",margin:"5px"}}>
+        <b>  Accurate property analysis in just a few clicks:</b>
         </Typography>
       </Grid>
       <Grid conrtainer direction="row">

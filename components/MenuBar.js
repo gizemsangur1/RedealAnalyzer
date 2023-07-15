@@ -16,6 +16,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LoginIcon from "@mui/icons-material/Login";
+import { Grid } from "@mui/material";
 const drawerWidth = 240;
 const navItems = [
   "Home",
@@ -52,18 +53,9 @@ export default function MenuBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", backgroundColor: "white" }}>
-      <CssBaseline />
-      <AppBar
-        component="nav"
-        sx={{ backgroundColor: "white", alignItems: "center" }}
-      >
-        <Toolbar
-          sx={{
-            width: "100%",
-            justifyContent: "space-between",
-          }}
-        >
+    <Grid container direction="row" sx={{height:"80px"}}>
+      <Grid container direction="row" sx={{display:"flex",justifyContent:"space-between"}}>
+        <Grid item xs={12} sm={2}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -73,23 +65,33 @@ export default function MenuBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box>
-            <img src="./logo.png" />
-          </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button sx={{ color: "black",m:2 }}>Home</Button>
-            <Button sx={{ color: "black",m:2  }}>How It Works</Button>
-            <Button sx={{ color: "black",m:2  }}>Features</Button>
-            <Button sx={{ color: "black",m:2  }}>Pricing</Button>
-            <span style={{margin:"10px", padding:"10px"}}>
-              <LoginIcon sx={{color:"#5663DA"}} />
+            <img src="./images/logo.png" />
+          
+        </Grid>
+        <Grid item sm={10} sx={{display: { xs: "none", sm: "flex" },justifyContent:"flex-end",alignItems:"center" ,right:0}}>
+          <Box sx={{ display: { xs: "none", sm: "block" },justifyContent:"space-between",alignItems:"center" ,right:0}}>
+            <Button sx={{ color: "black", m: 2 }}>How It Works</Button>
+            <Button sx={{ color: "black", m: 2 }}>Features</Button>
+            <Button sx={{ color: "black", m: 2 }}>Pricing</Button>
+            <span style={{ margin: "10px", padding: "10px" }}>
+              <LoginIcon sx={{ color: "#5663DA" }} />
               <Button sx={{ color: "black" }}>Login</Button>
             </span>
 
-            <button  style={{ color: "white" ,backgroundColor:"#5663da",borderRadius:"35px",width:"195px",height:"50px"}} >Get Started Free</button>
+            <button
+              style={{
+                color: "white",
+                backgroundColor: "#5663da",
+                borderRadius: "35px",
+                width: "195px",
+                height: "50px",
+              }}
+            >
+              Get Started Free
+            </button>
           </Box>
-        </Toolbar>
-      </AppBar>
+        </Grid>
+      </Grid>
       <Box component="nav">
         <Drawer
           container={container}
@@ -110,6 +112,6 @@ export default function MenuBar(props) {
           {drawer}
         </Drawer>
       </Box>
-    </Box>
+    </Grid>
   );
 }

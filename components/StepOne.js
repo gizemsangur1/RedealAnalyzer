@@ -23,10 +23,13 @@ export default function StepOne() {
             Quickly search for properties and import their description, list
             price, value & rent estimates, property taxes, photos and more.
           </p>
-          <ReButton name={"Contact Us Now"}/>
+          <Grid sx={{marginTop:"30px"}}>
+            <ReButton name={"Contact Us Now"} bgcolor={"#5663DA"} color={"white"} />
+          </Grid>
+          
         </Grid>
         <Grid item md={7}>
-          <img src="./step1.png" />
+          <img src="./images/step1.png" />
         </Grid>
       </Grid>
     </div>

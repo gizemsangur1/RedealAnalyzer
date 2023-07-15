@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 export default function BannerPage() {
   return (
-    <Grid container direction="row" sx={{backgroundColor:"#5663DA0A 4%"}}>
+    <Grid container direction="row" sx={{backgroundColor:"#5663DA0A "}}>
       <Grid item md={4} sm={12}>
         <Box sx={{ top: "60px", position: "relative" }}>
           <HeadingLine text={"REI Deal Analyzer"} />
@@ -24,7 +24,7 @@ export default function BannerPage() {
             ever since the 1500s.
           </p>
           <Grid container sx={{ marginTop: "25px" }}>
-            <ReButton name={"Try Deal Analyzer Now"} />
+            <ReButton name={"Try Deal Analyzer Now"} bgcolor={"#5663DA"} color={"white"}/>
             <Grid sx={{marginTop:"40px",marginLeft:"25px"}}>
               <Vectorsvg />
             </Grid>
@@ -32,7 +32,7 @@ export default function BannerPage() {
         </Box>
       </Grid>
       <Grid item md={8} sm={12}>
-        <img src="./banner.png" />
+        <img src="./images/banner.png" />
       </Grid>
     </Grid>
   );
