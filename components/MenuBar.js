@@ -53,26 +53,26 @@ export default function MenuBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Grid container direction="row" sx={{height:"80px"}}>
+    <Grid container direction="row" sx={{margin:"45px",display:"flex",alignItems:"center"}}>
       <Grid container direction="row" sx={{display:"flex",justifyContent:"space-between"}}>
-        <Grid item xs={12} sm={2}>
-          <IconButton
+        <Grid container item sm={12} md={2}>
+          <Grid item sm={3}><IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }, color: "black" }}
+            sx={{ mr: 2, display: { md: "none" }, color: "black" }}
           >
             <MenuIcon />
-          </IconButton>
-            <img src="./images/logo.png" />
-          
+          </IconButton></Grid>
+          <Grid item sm={9} sx={{display:"flex",justifyContent:"center",alignItems:"center"}}><img src="./images/logo.png" /></Grid>
+        
         </Grid>
-        <Grid item sm={10} sx={{display: { xs: "none", sm: "flex" },justifyContent:"flex-end",alignItems:"center" ,right:0}}>
-          <Box sx={{ display: { xs: "none", sm: "block" },justifyContent:"space-between",alignItems:"center" ,right:0}}>
-            <Button sx={{ color: "black", m: 2 }}>How It Works</Button>
-            <Button sx={{ color: "black", m: 2 }}>Features</Button>
-            <Button sx={{ color: "black", m: 2 }}>Pricing</Button>
+        <Grid item md={10} sx={{display: { sm: "none", md: "flex" },justifyContent:"flex-end",alignItems:"center" ,right:0}}>
+          <Box sx={{ display: { xs:"none",sm: "none", md: "block" },justifyContent:"space-between",alignItems:"center" ,right:0}}>
+            <Button sx={{ color: "black", m: 1 }}>How It Works</Button>
+            <Button sx={{ color: "black", m: 1 }}>Features</Button>
+            <Button sx={{ color: "black", m: 1 }}>Pricing</Button>
             <span style={{ margin: "10px", padding: "10px" }}>
               <LoginIcon sx={{ color: "#5663DA" }} />
               <Button sx={{ color: "black" }}>Login</Button>
@@ -102,7 +102,7 @@ export default function MenuBar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { sm: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,

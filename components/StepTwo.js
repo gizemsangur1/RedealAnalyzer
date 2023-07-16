@@ -6,7 +6,7 @@ import ReButton from "./ReButton";
 export default function StepTwo() {
   return (
     <div>
-      <Grid container sx={{backgroundColor:"#5663DA0A "}}>
+      <Grid container sx={{backgroundColor:"#5663DA0A",margin:"2px"}} spacing={2}>
         <Grid item md={7}>
           <img src="./images/step2.png" />
         </Grid>

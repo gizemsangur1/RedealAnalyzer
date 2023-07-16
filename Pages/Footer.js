@@ -47,20 +47,18 @@ export default function Footer() {
         gridTemplateColumns: "1fr",
         gridTemplateRows: "2fr",
         gridTemplateAreas: "overlap",
-        justifyContent:"center"
+        justifyContent: "center",
       }}
     >
       <div
         style={{
           width: "100%",
+          height: "100%",
           bottom: 0,
           backgroundColor: "#081D3A",
           paddingLeft: "24px",
           paddingRight: "24px",
           gridArea: "overlap",
-          height:"500px",
-          position:"relative",
-          top:"270px"
         }}
       >
         <Grid
@@ -68,9 +66,17 @@ export default function Footer() {
           sx={{
             backgroundColor: "#081D3A",
             color: "white",
+            width: "100%",
+            height: "100%",
           }}
         >
-          <Grid container sx={{ margin: "55px", marginTop: "95px" }}>
+          <Grid
+            container
+            item
+            sx={{ width: "100%", height: "100%" }}
+            direction="row"
+            xs={12}
+          >
             <Grid item xs={4}>
               <img src="./images/wlogo.png" />
               <p style={{ opacity: "80%", marginTop: 10 }}>
@@ -153,7 +159,9 @@ export default function Footer() {
           <Grid
             container
             direction="row"
-            sx={{ justifyContent: "space-evenly", opacity: "80%", margin: 2 }}
+            sx={{ justifyContent: "space-evenly", opacity: "80%" }}
+            item
+            xs={12}
           >
             <p>@ 2023 REI Deal Analyzer. All Rights Reserved</p>
             <Grid sx={{ color: "#5663DA", fontSize: "35px" }}>
@@ -162,17 +170,16 @@ export default function Footer() {
           </Grid>
         </Grid>
       </div>
-      <div
+      {/*  <div
         style={{
           gridArea: "overlap",
-          zIndex:999,
+          zIndex: 999,
         }}
       >
         <Grid
           container
           sx={{
-            position:"relative",
-            left:"100px",
+            position: "relative",
             backgroundColor: "#5663DA",
             borderRadius: "30px",
             textAlign: "center",
@@ -206,7 +213,7 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Grid>
-      </div>
+      </div> */}
     </div>
   );
 }

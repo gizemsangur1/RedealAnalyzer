@@ -9,8 +9,8 @@ import React from "react";
 export default function Features() {
   return (
     <div style={{backgroundColor:"#5663DA0A" }}>
-      <Grid container direction="row">
-        <Grid item md={5}>
+      <Grid container direction="row" spacing={2}>
+        <Grid item md={5} xs={12}>
           <Grid container sx={{top:"25%",position:"relative"}}>
             <b style={{ fontSize: "40px",margin:"5px" }}>
               Explore REI Deal Analyzer <br />
@@ -29,7 +29,7 @@ export default function Features() {
             
           </Grid>
         </Grid>
-        <Grid item md={7}>
+        <Grid item md={7} sx={{ display: { sm: "none",xs:"none", md: "inline" }}}>
           <Grid container sx={{margin:"5px",justifyContent:"center"}}>
             <Grid item direction="column">
               <Grid item>
@@ -121,6 +121,94 @@ export default function Features() {
             </Grid>
           </Grid>
         </Grid>
+        <Grid container item xs={12} sx={{ display: { sm: "inline",xs:"inline", md: "none" }}}  direction="row">
+       < Grid container sx={{margin:"5px",justifyContent:"center"}} direction="row">
+          
+              <Grid item>
+                <div
+                  style={{
+                    borderRadius: "8px",
+                    width: "312px",
+                    height: "246px",
+                    border: "2px solid #E8E8E8",
+                    textAlign: "center",
+                    margin: "10px",
+                  }}
+                >
+                  <Grid sx={{ position: "relative", top: "20%" }}>
+                    <InDepth />
+                    <b>In-depth Analysis</b>
+                    <p>
+                      Our advanced software analyzes market data, property
+                      details, and financial metrics to provide you...
+                    </p>
+                  </Grid>
+                </div>
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    borderRadius: "8px",
+                    width: "312px",
+                    height: "246px",
+                    border: "2px solid #E8E8E8",
+                    textAlign: "center",
+                    margin: "10px",
+                  }}
+                >
+                  <Grid sx={{ position: "relative", top: "20%" }}>
+                    <QuickAnalysis />
+                    <b>Quick Analysis</b>
+                    <p>
+                      Our Quick Chips tool is a powerful addition to your real
+                      estate inves- tment arsenal, providing a fast and...
+                    </p>
+                  </Grid>
+                </div>
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    borderRadius: "8px",
+                    width: "312px",
+                    height: "246px",
+                    border: "2px solid #E8E8E8",
+                    textAlign: "center",
+                    margin: "10px",
+                  }}
+                >
+                  <Grid sx={{ position: "relative", top: "20%" }}>
+                    <PropertyTypes />
+                    <b>Property Types</b>
+                    <p>
+                      REI Deal Analyzer is a versatile tool that can analyze a
+                      wide range of property types including single...
+                    </p>
+                  </Grid>
+                </div>
+              </Grid>
+              <Grid item>
+                <div
+                  style={{
+                    borderRadius: "8px",
+                    width: "312px",
+                    height: "246px",
+                    border: "2px solid #E8E8E8",
+                    textAlign: "center",
+                    margin: "10px",
+                  }}
+                >
+                  <Grid sx={{ position: "relative", top: "20%" }}>
+                    <Prospectus />
+                    <b>Prospectus Generator</b>
+                    <p>
+                      Introducing the REI Prospectus Generator, the newest
+                      addition to our real estate investment toolkit....
+                    </p>
+                  </Grid>
+                </div>
+              </Grid>
+          </Grid>        </Grid>
       </Grid>
     </div>
   );

@@ -10,7 +10,7 @@ export default function Logo() {
         <b style={{ fontSize: "26px",whiteSpace:"break-spaces",color:"#5663da" }}>20+ </b>
         <b style={{ fontSize: "26px" }}>Satisfied Clients</b>
       </Grid>
-      <Grid container direction="row" sx={{justifyContent:"space-evenly"}}>
+      <Grid container direction="row" sx={{justifyContent:"space-evenly"}} spacing={2}>
         <Grid item>
           <img src="./logos/Group9.png" />
         </Grid>
@@ -29,7 +29,7 @@ export default function Logo() {
         <Grid item>
           <img src="./logos/Group5.png" />
         </Grid>
-        <Grid item>
+        <Grid item sx={{display: { sm: "none",xs:"none", md: "inline" }}}>
           <img src="./logos/Group7.png" />
         </Grid>
       </Grid>
