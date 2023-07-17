@@ -1,12 +1,51 @@
+'use client';
 import InDepth from "@/components/InDepth";
 import PropertyTypes from "@/components/PropertyTypes";
 import Prospectus from "@/components/Prospectus";
 import QuickAnalysis from "@/components/QuickAnalysis";
 import ReButton from "@/components/ReButton";
 import { Grid } from "@mui/material";
-import React from "react";
-
+import React, { useState } from "react";
+import { IoIosArrowDropleft } from "react-icons/io";
+import { IoIosArrowDropright } from "react-icons/io";
 export default function Features() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const items = [
+    {
+      component: <InDepth />,
+      title: "In-depth Analysis",
+      description:
+        "Our advanced software analyzes market data, property details, and financial metrics to provide you...",
+    },
+    {
+      component: <QuickAnalysis />,
+      title: "Quick Analysis",
+      description:
+        "Our Quick Chips tool is a powerful addition to your real estate inves- tment arsenal, providing a fast and...",
+    },
+    {
+      component: <PropertyTypes />,
+      title: "Property Types",
+      description:
+        "REI Deal Analyzer is a versatile tool that can analyze a wide range of property types including single...",
+    },
+    {
+      component: <Prospectus />,
+      title: "Prospectus Generator",
+      description:
+        "Introducing the REI Prospectus Generator, the newest addition to our real estate investment toolkit....",
+    },
+  ];
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    );
+  };
   return (
     <div style={{backgroundColor:"#5663DA0A" }}>
       <Grid container direction="row" spacing={2}>
@@ -121,93 +160,48 @@ export default function Features() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container item xs={12} sx={{ display: { sm: "inline",xs:"inline", md: "none" }}}  direction="row">
+        <Grid container item xs={12} sx={{ display: { sm: "inline",xs:"inline", md: "none" },marginTop:"90px"}}  direction="row">
        < Grid container sx={{margin:"5px",justifyContent:"center"}} direction="row">
-          
-              <Grid item>
-                <div
-                  style={{
-                    borderRadius: "8px",
-                    width: "312px",
-                    height: "246px",
-                    border: "2px solid #E8E8E8",
-                    textAlign: "center",
-                    margin: "10px",
-                  }}
-                >
-                  <Grid sx={{ position: "relative", top: "20%" }}>
-                    <InDepth />
-                    <b>In-depth Analysis</b>
-                    <p>
-                      Our advanced software analyzes market data, property
-                      details, and financial metrics to provide you...
-                    </p>
-                  </Grid>
-                </div>
+       <Grid item direction="column">
+        <Grid item>
+          <div
+            style={{
+              borderRadius: "8px",
+              width: "312px",
+              height: "246px",
+              border: "2px solid #E8E8E8",
+              textAlign: "center",
+              margin: "10px",
+            }}
+          >
+            <Grid sx={{ position: "relative", top: "20%" }}>
+              {items[currentIndex].component}
+              <b>{items[currentIndex].title}</b>
+              <p>{items[currentIndex].description}</p>
+            </Grid>
+          </div>
+        </Grid>
+        <Grid item sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid
+                item
+                sx={{
+                  fontSize:"60px",
+                }}
+               onClick={handlePrevious} 
+              >
+                <IoIosArrowDropleft color="#000000" opacity="20%"/>
               </Grid>
-              <Grid item>
-                <div
-                  style={{
-                    borderRadius: "8px",
-                    width: "312px",
-                    height: "246px",
-                    border: "2px solid #E8E8E8",
-                    textAlign: "center",
-                    margin: "10px",
-                  }}
-                >
-                  <Grid sx={{ position: "relative", top: "20%" }}>
-                    <QuickAnalysis />
-                    <b>Quick Analysis</b>
-                    <p>
-                      Our Quick Chips tool is a powerful addition to your real
-                      estate inves- tment arsenal, providing a fast and...
-                    </p>
-                  </Grid>
-                </div>
+              <Grid
+                item
+                sx={{
+                  fontSize:"60px",
+                }}
+                onClick={handleNext} 
+              >
+                <IoIosArrowDropright color="#000000" opacity="20%" enableBackground="#5663DA" />
               </Grid>
-              <Grid item>
-                <div
-                  style={{
-                    borderRadius: "8px",
-                    width: "312px",
-                    height: "246px",
-                    border: "2px solid #E8E8E8",
-                    textAlign: "center",
-                    margin: "10px",
-                  }}
-                >
-                  <Grid sx={{ position: "relative", top: "20%" }}>
-                    <PropertyTypes />
-                    <b>Property Types</b>
-                    <p>
-                      REI Deal Analyzer is a versatile tool that can analyze a
-                      wide range of property types including single...
-                    </p>
-                  </Grid>
-                </div>
-              </Grid>
-              <Grid item>
-                <div
-                  style={{
-                    borderRadius: "8px",
-                    width: "312px",
-                    height: "246px",
-                    border: "2px solid #E8E8E8",
-                    textAlign: "center",
-                    margin: "10px",
-                  }}
-                >
-                  <Grid sx={{ position: "relative", top: "20%" }}>
-                    <Prospectus />
-                    <b>Prospectus Generator</b>
-                    <p>
-                      Introducing the REI Prospectus Generator, the newest
-                      addition to our real estate investment toolkit....
-                    </p>
-                  </Grid>
-                </div>
-              </Grid>
+        </Grid>
+      </Grid>
           </Grid>        </Grid>
       </Grid>
     </div>
