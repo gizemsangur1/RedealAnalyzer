@@ -45,7 +45,7 @@ export default function Testimonal() {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop: "40px",
+                marginTop: {sm:0,md:"20px"},
               }}
             >
               <Grid

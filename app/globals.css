@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@font-face {
+  font-family: 'QanelasSoftBlack';
+  src: url('../public/fonts/QanelasSoftMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
