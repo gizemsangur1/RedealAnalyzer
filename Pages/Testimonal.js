@@ -4,9 +4,7 @@ import React from "react";
 import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
 export default function Testimonal() {
-  /* const hadnleRight=()=>{
-
-  } */
+ 
   return (
     <div>
       <Grid
@@ -50,21 +48,16 @@ export default function Testimonal() {
             >
               <Grid
                 item
-                sx={{
-                  fontSize:"60px",
-                }}
                 /* onClick={handleLeft} */
               >
-                <IoIosArrowDropleft color="#000000" opacity="20%"/>
+                
+                <IoIosArrowDropleft color="#000000" opacity="20%" size={60} attributeName="bg-blue" />
               </Grid>
               <Grid
                 item
-                sx={{
-                  fontSize:"60px",
-                }}
                 /* onClick={handleRight}  */
               >
-                <IoIosArrowDropright color="#000000" opacity="20%" enableBackground="#5663DA" />
+                <IoIosArrowDropright color="#000000" opacity="20%" size={60}/>
               </Grid>
             </Grid>
           </Grid>
