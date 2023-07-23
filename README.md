@@ -23,4 +23,4 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 <img src="./public/images/website.jpeg">
 
 ### Responsive 
-<img src="../summit/public/images/responsive.jpeg">
+<img src="./public/images/responsive.jpeg">
